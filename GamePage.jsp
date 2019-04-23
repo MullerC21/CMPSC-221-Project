@@ -17,7 +17,7 @@
         <form>
             <label><b>Bet Amount:</b></label>
             <input type="text" id="userInput"/>
-            <input type="button" value="submit" onclick="document.getElementById('userInput').disabled = true;"/>
+            <input type="button" value="Submit" onclick="document.getElementById('userInput').disabled = true;"/>
         </form>
         
         <form action="GamePage.jsp" method="post">
