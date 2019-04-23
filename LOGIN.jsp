@@ -22,5 +22,8 @@
             <input type="text" name ="LastName" required><br>
             <input type="submit" value="Submit" id="submit">
         </form>
+        <form action="SIGNUP.jsp">
+            <input type="submit" value="Sign Up">
+        </form>
     </body>
 </html>
