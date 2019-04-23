@@ -13,7 +13,7 @@
     </head>
     <body>
         <h1>Baby Gambles</h1>
-        <form action="surveyList" method="post">
+        <form action="GamePage.jsp" method="post">
             <input type="hidden" name="action" value="add">
                                 
             <label> Email: </label>
