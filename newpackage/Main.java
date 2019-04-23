@@ -19,6 +19,7 @@ public class Main {
     public static void main( String args[] )
     {
         JFrame test = new AdminUserDatabase();
+        //test.setSize(10000, 10000);
         test.setLocationRelativeTo(null);
     } // end method main
     

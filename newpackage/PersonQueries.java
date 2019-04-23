@@ -85,8 +85,8 @@ public class PersonQueries
          // create insert that adds a new entry into the database
          insertNewPerson = connection.prepareStatement( 
             "INSERT INTO Users " + 
-            "( Email, FirstName, LastName, Password, Currency ) " + 
-            "VALUES ( ?, ?, ?, ? , ? )" );
+            "( Email, FirstName, LastName, Password, Currency, Credit_Card ) " + 
+            "VALUES ( ?, ?, ?, ? , ? , ?)" );
          
          // create delete that gets rid of current entry
          deletePerson = connection.prepareStatement(
@@ -119,7 +119,8 @@ public class PersonQueries
                     resultSet.getString( "FirstName" ),
                     resultSet.getString( "LastName" ),
                     resultSet.getString( "Password" ),
-                    resultSet.getString( "Currency" ) ) );
+                    resultSet.getString( "Currency" ),
+                    resultSet.getString( "Credit_Card" ) ) );
             } // end while
         } // end try
         catch ( SQLException sqlException )
@@ -163,7 +164,8 @@ public class PersonQueries
                     resultSet.getString( "FirstName" ), 
                     resultSet.getString( "LastName" ), 
                     resultSet.getString( "Password" ), 
-                    resultSet.getString( "Currency" ) ) );
+                    resultSet.getString( "Currency" ),
+                    resultSet.getString( "Credit_Card" )) );
          } // end while
         } // end try
         catch ( SQLException sqlException )
@@ -188,7 +190,7 @@ public class PersonQueries
    
    // add an entry
     public int addPerson( 
-        String email, String fname, String lname, String pass , String currency )
+        String email, String fname, String lname, String pass , String currency, String creditCard )
     {
         int result = 0;
       
@@ -200,6 +202,7 @@ public class PersonQueries
          insertNewPerson.setString( 3, lname );
          insertNewPerson.setString( 4, pass );
          insertNewPerson.setString( 5, currency);
+         insertNewPerson.setString( 6, creditCard);
 
          // insert the new entry; returns # of rows updated
          result = insertNewPerson.executeUpdate(); 

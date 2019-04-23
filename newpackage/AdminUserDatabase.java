@@ -52,6 +52,9 @@ public class AdminUserDatabase extends JFrame
    private JTextField queryTextField;
    private JButton insertButton;
    private JButton deleteButton;
+   private JLabel cardLabel;
+   private JTextField cardTextField;
+   
    
    // no-argument constructor
    public AdminUserDatabase()
@@ -79,6 +82,8 @@ public class AdminUserDatabase extends JFrame
       passwordTextField = new JTextField( 10 );
       currencyLabel = new JLabel();
       currencyTextField = new JTextField( 10 );
+      cardLabel = new JLabel();
+      cardTextField = new JTextField( 10 );
       queryPanel = new JPanel();
       queryLabel = new JLabel();
       queryTextField = new JTextField( 10 );
@@ -149,7 +154,7 @@ public class AdminUserDatabase extends JFrame
       navigatePanel.add( nextButton );
       add( navigatePanel );
 
-      displayPanel.setLayout( new GridLayout( 5, 2, 4, 4 ) );
+      displayPanel.setLayout( new GridLayout( 6, 2, 4, 4 ) );
 
       emailLabel.setText( "Email:" );
       displayPanel.add( emailLabel );
@@ -170,6 +175,11 @@ public class AdminUserDatabase extends JFrame
       currencyLabel.setText( "Avaiable Currency:" );
       displayPanel.add( currencyLabel );
       displayPanel.add( currencyTextField );
+      
+      cardLabel.setText( "Credit Card #: ");
+      displayPanel.add( cardLabel );
+      displayPanel.add( cardTextField );
+      
       add( displayPanel );
 
       queryPanel.setLayout( 
@@ -307,6 +317,7 @@ public class AdminUserDatabase extends JFrame
          currencyTextField.setText( "" );
          maxTextField.setText( "" );
          indexTextField.setText( "" );
+         cardTextField.setText( "" );
          
          JOptionPane.showMessageDialog( this, "Person not found!",
             "Error", JOptionPane.PLAIN_MESSAGE );
@@ -367,7 +378,8 @@ public class AdminUserDatabase extends JFrame
    {
       int result = personQueries.addPerson( emailTextField.getText(),
          firstNameTextField.getText(), lastNameTextField.getText(),
-         passwordTextField.getText() , currencyTextField.getText() );
+         passwordTextField.getText() , currencyTextField.getText(),
+         cardTextField.getText() );
       
       if ( result == 1 )
          JOptionPane.showMessageDialog( this, "Person added!",
@@ -394,6 +406,7 @@ public class AdminUserDatabase extends JFrame
          currencyTextField.setText( "" );
          maxTextField.setText( "" );
          indexTextField.setText( "" );
+         cardTextField.setText( "" );
       }
       else
          JOptionPane.showMessageDialog( this, "Person not deleted!",

@@ -9,6 +9,7 @@ public class Person
    private String lastName;
    private String password;
    private String currency;
+   private String credit_card;
 
    // no-argument constructor
    public Person()
@@ -17,13 +18,14 @@ public class Person
 
    // constructor
    public Person( String emailAddress, String first, String last, 
-      String password, String currency )
+      String password, String currency, String creditCard )
    {
       setEmail( emailAddress );
       setFirstName( first );
       setLastName( last );
       setPassword( password );
       setCurrency( currency );
+      setCreditCard( creditCard );
    } // end five-argument Person constructor 
 
    // sets the addressID
@@ -85,6 +87,16 @@ public class Person
    {
       return currency;
    } // end method getPhoneNumber
+
+    private void setCreditCard(String creditCard) 
+    {
+        credit_card = creditCard;
+    }
+    
+    public String getCreditCard()
+    {
+        return credit_card;
+    }
 } // end class Person
 
 
