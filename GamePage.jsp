@@ -6,8 +6,16 @@
         <title>Game Page</title>
     </head>
     <script>
-        function diceRollFunction() {
-            
+        function diceRollFunction() 
+        {
+           int MAX = 6; // Max of the number in rand
+	        int roll; // total value of roll
+            Random rand = new Random();
+
+	        // Computer picks a number between 1 and MAX
+	        roll = rand.nextInt((MAX - 1) + 1) + 1;
+        
+            return roll; 
         }
     </script>
     <body>
