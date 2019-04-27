@@ -1,9 +1,3 @@
-<%-- 
-    Document   : SIGNUP
-    Created on : Apr 22, 2019, 12:07:29 PM
-    Author     : philipkarpouzie
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -13,7 +7,7 @@
     </head>
     <body>
         <h1>Sign up:</h1>
-         <form action = "meh" method ="get" />
+         <form action = "LoginPage.jsp" method ="get" />
             <label>First Name:  </label> 
             <input type="text" name ="FirstName" /><br>
             <label>Last Name:   </label> 
@@ -24,6 +18,6 @@
             <input type="text" name ="Email" /> <br>
             <label>Password:    </label>
             <input type="text" name ="Password" /> <br>
-           <input type="submit" value="submit now"/>
+            <input type="submit" value="submit now"/>
     </body>
 </html>
