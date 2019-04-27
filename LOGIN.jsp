@@ -1,9 +1,3 @@
-<%-- 
-    Document   : LOGIN
-    Created on : Apr 22, 2019, 12:05:34 PM
-    Author     : philipkarpouzie
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -13,9 +7,8 @@
     </head>
     <body>
         <h1>Baby Gambles</h1>
-        <form action="GamePage.jsp" method="post">
+        <form action="BetPage.jsp" method="post">
             <input type="hidden" name="action" value="add">
-                                
             <label> Email: </label>
             <input type="text" name="FirstName" required><br>
             <label> Password: </label>
