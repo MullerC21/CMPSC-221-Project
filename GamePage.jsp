@@ -50,8 +50,8 @@
             
             var minNumber = 1; // The minimum number you want
             var maxNumber = 6; // The maximum number you want
-            var Roll1 = Math.floor(Math.random() * (maxNumber + 1) + minNumber); // Generates random number
-            var Roll2 = Math.floor(Math.random() * (maxNumber + 1) + minNumber); // Generates random number
+            var Roll1 = Math.floor(Math.random() * (maxNumber) + minNumber); // Generates random number
+            var Roll2 = Math.floor(Math.random() * (maxNumber) + minNumber); // Generates random number
             
             var RollTotal = Roll1 + Roll2;
             
@@ -126,7 +126,8 @@
             <input type="submit" value="Play Again!"/>
         </form>
         
-        <form action="LoginPage.jsp">
+        <form action="BabyGambles">
+            <input type="hidden" name="action" value="join">
             <input type="submit" value="Sign Out"/> 
         </form>
         

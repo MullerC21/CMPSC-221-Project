@@ -1,4 +1,3 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -7,17 +6,18 @@
     </head>
     <body>
         <h1>Sign up:</h1>
-         <form action = "LoginPage.jsp" method ="get" />
+         <form action = "BabyGambles" method ="get" />
+            <input type="hidden" name="action" value="add">
             <label>First Name:  </label> 
-            <input type="text" name ="FirstName" /><br>
+            <input type="text" name ="FirstName" required><br>
             <label>Last Name:   </label> 
-            <input type="text" name ="LastName" /><br>
+            <input type="text" name ="LastName" required><br>
             <label>Credit Card: </label>
-            <input type="text" name ="CreditCard" /><br>
+            <input type="text" name ="CreditCard" required><br>
             <label>Email:       </label> 
-            <input type="text" name ="Email" /> <br>
+            <input type="text" name ="Email" required> <br>
             <label>Password:    </label>
-            <input type="text" name ="Password" /> <br>
-            <input type="submit" value="submit now"/>
+            <input type="text" name ="Password" required> <br>
+            <input type="submit" value="submit now">
     </body>
 </html>

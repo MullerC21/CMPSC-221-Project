@@ -7,15 +7,16 @@
     </head>
     <body>
         <h1>Baby Gambles</h1>
-        <form action="BetPage.jsp" method="post">
-            <input type="hidden" name="action" value="add">
+        <form action="BabyGambles" method="post">
+            <input type="hidden" name="action" value="login">
             <label> Email: </label>
-            <input type="text" name="FirstName" required><br>
+            <input type="text" name="Email" required><br>
             <label> Password: </label>
-            <input type="text" name ="LastName" required><br>
-            <input type="submit" value="Submit" id="submit">
+            <input type="text" name ="Password" required><br>
+            <input type="submit" value="Log In">
         </form>
-        <form action="SIGNUP.jsp">
+        <form action="BabyGambles" method="post">
+            <input type="hidden" name="action" value="signup">
             <input type="submit" value="Sign Up">
         </form>
     </body>
