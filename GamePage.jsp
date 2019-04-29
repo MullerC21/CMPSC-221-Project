@@ -15,9 +15,7 @@
              * roll's and then add them together to use this in the game page.
              */ 
             var Roll1 = <%= RollDice.roll_dice()%>;
-            
             var Roll2 = <%= RollDice.roll_dice()%>;
-            
             var RollTotal = Roll1 + Roll2;
             /*
              * The if and else if statements below call a web source to a dice roll.
@@ -25,29 +23,18 @@
              * roll one and roll two. 
              */
             if(Roll1 === 1) document.getElementById('Dice1').src = "http://dobbelsteen.virtuworld.net/img/1c.gif";
-            
-                else if(Roll1 === 2) document.getElementById('Dice1').src = "http://dobbelsteen.virtuworld.net/img/2c.gif";
-            
-                else if(Roll1 === 3) document.getElementById('Dice1').src = "http://dobbelsteen.virtuworld.net/img/3c.gif";
-            
-                else if(Roll1 === 4) document.getElementById('Dice1').src = "http://dobbelsteen.virtuworld.net/img/4c.gif";
-            
-                else if(Roll1 === 5) document.getElementById('Dice1').src = "http://dobbelsteen.virtuworld.net/img/5c.gif";
-            
-                else if(Roll1 === 6) document.getElementById('Dice1').src = "http://dobbelsteen.virtuworld.net/img/6c.gif";
-            
+            else if(Roll1 === 2) document.getElementById('Dice1').src = "http://dobbelsteen.virtuworld.net/img/2c.gif";
+            else if(Roll1 === 3) document.getElementById('Dice1').src = "http://dobbelsteen.virtuworld.net/img/3c.gif";
+            else if(Roll1 === 4) document.getElementById('Dice1').src = "http://dobbelsteen.virtuworld.net/img/4c.gif";
+            else if(Roll1 === 5) document.getElementById('Dice1').src = "http://dobbelsteen.virtuworld.net/img/5c.gif";
+            else if(Roll1 === 6) document.getElementById('Dice1').src = "http://dobbelsteen.virtuworld.net/img/6c.gif";
             
             if(Roll2 === 1) document.getElementById('Dice2').src = "http://dobbelsteen.virtuworld.net/img/1c.gif";
-            
-                else if(Roll2 === 2) document.getElementById('Dice2').src = "http://dobbelsteen.virtuworld.net/img/2c.gif";
-                
-                else if(Roll2 === 3) document.getElementById('Dice2').src = "http://dobbelsteen.virtuworld.net/img/3c.gif";
-                
-                else if(Roll2 === 4) document.getElementById('Dice2').src = "http://dobbelsteen.virtuworld.net/img/4c.gif";
-                
-                else if(Roll2 === 5) document.getElementById('Dice2').src = "http://dobbelsteen.virtuworld.net/img/5c.gif";
-                
-                else if(Roll2 === 6) document.getElementById('Dice2').src = "http://dobbelsteen.virtuworld.net/img/6c.gif";
+            else if(Roll2 === 2) document.getElementById('Dice2').src = "http://dobbelsteen.virtuworld.net/img/2c.gif";
+            else if(Roll2 === 3) document.getElementById('Dice2').src = "http://dobbelsteen.virtuworld.net/img/3c.gif";
+            else if(Roll2 === 4) document.getElementById('Dice2').src = "http://dobbelsteen.virtuworld.net/img/4c.gif";
+            else if(Roll2 === 5) document.getElementById('Dice2').src = "http://dobbelsteen.virtuworld.net/img/5c.gif";
+            else if(Roll2 === 6) document.getElementById('Dice2').src = "http://dobbelsteen.virtuworld.net/img/6c.gif";
             
             alert("You rolled a " + Roll1 + " and a " + Roll2 + ", giving your roll a total value of " + RollTotal);
             /*
@@ -77,11 +64,11 @@
              */ 
             var minNumber = 1; // The minimum number you want
             var maxNumber = 6; // The maximum number you want
-            var Roll1 = Math.floor(Math.random() * (maxNumber + 1) + minNumber); // Generates random number
-            var Roll2 = Math.floor(Math.random() * (maxNumber + 1) + minNumber); // Generates random number
+            var Roll1 = Math.floor(Math.random() * (maxNumber) + minNumber); // Generates random number
+            var Roll2 = Math.floor(Math.random() * (maxNumber) + minNumber); // Generates random number
             
             var RollTotal = Roll1 + Roll2;
-             /*
+            /*
              * The if and else if statements below call a web source to a dice roll.
              * This is used for the user to see how they did with an image for both
              * roll one and roll two. 
@@ -120,6 +107,7 @@
     <script>
         var link = document.getElementById('getNumber'); // Gets the link
         link.onclick = getNumber; // Runs the function on click
+
         function getNumber() {
         var minNumber = 0; // The minimum number you want
         var maxNumber = 100; // The maximum number you want
@@ -156,7 +144,8 @@
             <input type="submit" value="Play Again!"/>
         </form>
         
-        <form action="LoginPage.jsp">
+        <form action="BabyGambles">
+            <input type="hidden" name="action" value="join">
             <input type="submit" value="Sign Out"/> 
         </form>
         

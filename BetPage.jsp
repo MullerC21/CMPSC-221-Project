@@ -7,13 +7,14 @@
     </head>
     <body>
         <h1>Betting Page</h1>
-           <%-- After logging/signing in, this page will prompt the user to how much money they want to give.--%>
+        <%-- After logging/signing in, this page will prompt the user to how much money they want to give.--%>
         <p>Please enter the amount you wish to bet:</p><br>
-        <form action="GamePage.jsp" method="post">
+        <form action="BabyGambles" method="post">
+            <input type="hidden" name="action" value="bet">
             <label><b>Bet Amount:</b></label>
-            <input type="text" id="userInput"/>
+            <input type="text" name ="currency"  required>
             <%-- This is a textbox that is used for insertign an initial amount into our database.--%>
-            <input type="submit"/>
+            <input type="submit" value="Bet"/>
         </form>
     </body>
 </html>
